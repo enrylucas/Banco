@@ -1,8 +1,8 @@
 package br.edu.unifei.darksouls3
-
 import scala.slick.driver.PostgresDriver.simple._
+class Humanoide(tag: Tag) extends Table[(String,Int,Int,Int,Long,Boolean,Int,Int,Int,Int,Float,Float,Int,Float,Option[Int])](tag,"humanoide"){
 
-class Humanoide(tag: Tag) extends Table[(String,Int,Int,Int,Long,Boolean,Int,Int,Int,Int,Float,Float,Int,Float)](tag,"humanoide"){
+  val aparencias = TableQuery[Aparencia]
   def nome = column[String]("nome",O.PrimaryKey)
   def vida = column[Int]("vida")
   def foco = column[Int]("foco")
@@ -17,6 +17,9 @@ class Humanoide(tag: Tag) extends Table[(String,Int,Int,Int,Long,Boolean,Int,Int
   def defesaMagica = column[Float]("defesaMagica")
   def nivel = column[Int]("nivel")
   def cargaEquipamento = column[Float]("cargaEquipamento")
+  def idAparencia = column[Option[Int]]("idAparencia")
 
-  def * = (nome,vida,foco,estamina,almas,hollow,forca,destreza,inteligencia,fe,defesaFisica,defesaMagica,nivel,cargaEquipamento)
+  def * = (nome,vida,foco,estamina,almas,hollow,forca,destreza,inteligencia,fe,defesaFisica,defesaMagica,nivel,cargaEquipamento,idAparencia)
+
+  def aparencia = foreignKey("aparencia_FK",idAparencia,aparencias)(_.idVisual)
 }

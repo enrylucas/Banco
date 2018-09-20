@@ -16,26 +16,30 @@ object Main {
     // database name is "my-db"
     // username is "postgres"
     // and password is "postgres"
-    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=system"
+    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=admin"
 
     Database.forURL(connectionUrl, driver = "org.postgresql.Driver") withSession {
       implicit session =>
         val monstros = TableQuery[Monstro]
         val humanoides = TableQuery[Humanoide]
-        //(monstros.ddl ++ humanoides.ddl).create
+        val armas = TableQuery[Arma]
+        val armaduras = TableQuery[Armadura]
+        val regioes = TableQuery[Regiao]
+
+        (monstros.ddl ++ humanoides.ddl).create
 
         //Como criar linhas na tabela:
-        monstros += ("Crystal Lizard", 100, 0, 0, 1000, false, 0, 0, 0, 0, 200, 40, false, false)
+       // monstros += ("Crystal Lizard", 100, 0, 0, 1000, false, 0, 0, 0, 0, 200, 40, false, false)
 
-        humanoides ++= Seq(
+        /*humanoides ++= Seq(
           ("Jolly", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42),
           ("Jollie", 1100, 60, 90, 311822, true, 18, 16, 50, 20, 100, 190, 90, 42)
-        )
+        )*/
 
         //Como executar queries:
-        humanoides foreach { case (nome, vida, foco, estamina, almas, hollow, forca, destreza, inteligencia, fe, defesaFisica, defesaMagica, nivel, cargaEquipamento) =>
+        /*humanoides foreach { case (nome, vida, foco, estamina, almas, hollow, forca, destreza, inteligencia, fe, defesaFisica, defesaMagica, nivel, cargaEquipamento) =>
           println(nome, vida, foco, estamina, almas, hollow, forca, destreza, inteligencia, fe, defesaFisica, defesaMagica, nivel, cargaEquipamento)
-        }
+        }*/
         /*val users = TableQuery[Users]
 
         // SELECT * FROM users

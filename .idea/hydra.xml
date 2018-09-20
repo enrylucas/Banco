@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="HydraSettings">
-    <option name="hydraStorePath" value="C:\Users\enry_\Desktop\Banco\.hydra\idea" />
+    <option name="hydraStorePath" value="C:\Users\castr\Desktop\Codigo Scala\novoBanco\.hydra\idea" />
     <option name="noOfCores" value="4" />
-    <option name="projectRoot" value="C:\Users\enry_\Desktop\Banco" />
+    <option name="projectRoot" value="C:\Users\castr\Desktop\Codigo Scala\novoBanco" />
     <option name="sourcePartitioner" value="auto" />
   </component>
 </project>
