@@ -25,16 +25,21 @@ object Main {
         val armas = TableQuery[Arma]
         val armaduras = TableQuery[Armadura]
         val regioes = TableQuery[Regiao]
+        val aparencias = TableQuery[Aparencia]
+        val classes = TableQuery[Classe]
 
-        (monstros.ddl ++ humanoides.ddl).create
+       // ( classes.ddl ++ regioes.ddl ++ humanoides.ddl ++ aparencias.ddl ).create
 
         //Como criar linhas na tabela:
        // monstros += ("Crystal Lizard", 100, 0, 0, 1000, false, 0, 0, 0, 0, 200, 40, false, false)
+        classes += ("padre",10,2,3,5,10)
+        aparencias += (10,"liso", "marrom","grande", "verde", "M", 2, "preto")
+        regioes += ("LugarNenhum",2)
 
-        /*humanoides ++= Seq(
-          ("Jolly", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42),
-          ("Jollie", 1100, 60, 90, 311822, true, 18, 16, 50, 20, 100, 190, 90, 42)
-        )*/
+        humanoides ++= Seq(
+          ("Jolly", "padre", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42,10,"LugarNenhum"),
+          ("Jollie", "padre", 1100, 60, 90, 311822, true, 18, 16, 50, 20, 100, 190, 90, 42,10,"LugarNenhum")
+        )
 
         //Como executar queries:
         /*humanoides foreach { case (nome, vida, foco, estamina, almas, hollow, forca, destreza, inteligencia, fe, defesaFisica, defesaMagica, nivel, cargaEquipamento) =>
