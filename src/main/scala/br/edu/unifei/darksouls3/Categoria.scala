@@ -1,7 +1,6 @@
 package br.edu.unifei.darksouls3
 
-import scala.slick.driver.PostgresDriver.simple._
-
+import slick.driver._
 
   object Categoria extends Enumeration {
     type Categoria = Value
@@ -9,4 +8,3 @@ import scala.slick.driver.PostgresDriver.simple._
     val B = Value("espada")
     val C = Value("katana")
   }
-

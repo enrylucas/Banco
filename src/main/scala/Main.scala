@@ -25,6 +25,9 @@ object Main {
         val armas = TableQuery[Arma]
         val armaduras = TableQuery[Armadura]
         val regioes = TableQuery[Regiao]
+        val itens = TableQuery[Item]
+        val classes = TableQuery[Classe]
+        val aparencias = TableQuery[Aparencia]
 
         (monstros.ddl ++ humanoides.ddl).create
 
