@@ -1,3 +1,5 @@
+import br.edu.unifei.darksouls3.Categoria.Value
+
 import scala.slick.driver.PostgresDriver.simple._
 import br.edu.unifei.darksouls3._
 
@@ -16,25 +18,27 @@ object Main {
     // database name is "my-db"
     // username is "postgres"
     // and password is "postgres"
-    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=admin"
+    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=system"
 
     Database.forURL(connectionUrl, driver = "org.postgresql.Driver") withSession {
       implicit session =>
-        val monstros = TableQuery[Monstro]
+
         val humanoides = TableQuery[Humanoide]
         val armas = TableQuery[Arma]
         val armaduras = TableQuery[Armadura]
         val regioes = TableQuery[Regiao]
         val aparencias = TableQuery[Aparencia]
         val classes = TableQuery[Classe]
+        val monstros = TableQuery[Monstro]
 
-       // ( classes.ddl ++ regioes.ddl ++ humanoides.ddl ++ aparencias.ddl ).create
+        ( classes.ddl ++ regioes.ddl ++ humanoides.ddl ++ aparencias.ddl ++ armas.ddl ++ armaduras.ddl ++ monstros.ddl).create
 
         //Como criar linhas na tabela:
-       // monstros += ("Crystal Lizard", 100, 0, 0, 1000, false, 0, 0, 0, 0, 200, 40, false, false)
         classes += ("padre",10,2,3,5,10)
         aparencias += (10,"liso", "marrom","grande", "verde", "M", 2, "preto")
         regioes += ("LugarNenhum",2)
+        armas += ("Espadão", 20, 200, 100, 300, false, Categoria.espada)
+        monstros += ("Crystal Lizard", 100, 0, 0, 1000, false, 0, 0, 0, 0, 200, 40, false, false, "LugarNenhum")
 
         humanoides ++= Seq(
           ("Jolly", "padre", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42,10,"LugarNenhum"),
@@ -45,7 +49,9 @@ object Main {
         /*humanoides foreach { case (nome, vida, foco, estamina, almas, hollow, forca, destreza, inteligencia, fe, defesaFisica, defesaMagica, nivel, cargaEquipamento) =>
           println(nome, vida, foco, estamina, almas, hollow, forca, destreza, inteligencia, fe, defesaFisica, defesaMagica, nivel, cargaEquipamento)
         }*/
+
         /*val users = TableQuery[Users]
+
 
         // SELECT * FROM users
         users.list foreach { row =>
