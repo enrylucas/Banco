@@ -3,7 +3,7 @@ package br.edu.unifei.darksouls3
 import scala.slick.driver.PostgresDriver.simple._
 
 class Aparencia(tag: Tag) extends Table[(Int,String,String,String,String,String,Float,String)](tag,"aparencia"){
-  def idVisual = column[Int]("idVisual",O.PrimaryKey)
+  def idVisual = column[Int]("idVisual",O.PrimaryKey,O.AutoInc)
   def cabelo = column[String]("cabelo")
   def cabeloCor = column[String]("cabeloCor")
   def olho = column[String]("olho")
