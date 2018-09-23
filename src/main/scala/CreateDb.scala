@@ -40,8 +40,8 @@ object CreateDb {
         monstros += ("Crystal Lizard", 100, 0, 0, 1000, false, 0, 0, 0, 0, 200, 40, false, false, "LugarNenhum")
         armaduras += ("Xanthous Crown", 10, 100, 49, 58, false, Categoria.elmo)
         humanoides ++= Seq(
-          ("Jolly", "Assassin", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42,10,"LugarNenhum"),
-          ("Jollie", "Mercenary", 1100, 60, 90, 311822, true, 18, 16, 50, 20, 100, 190, 90, 42,10,"LugarNenhum")
+          ("Jolly", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42, "Assassin",10,"LugarNenhum"),
+          ("Jollie", 1100, 60, 90, 311822, true, 18, 16, 50, 20, 100, 190, 90, 42,"Mercenary",10,"LugarNenhum")
         )
 
         println("Creation completed.")

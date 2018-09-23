@@ -17,10 +17,11 @@ class Monstro(tag: Tag) extends Table[(String,Int,Int,Int,Long,Boolean,Int,Int,I
   def fe = column[Int]("fe")
   def defesaFisica = column[Float]("defesaFisica")
   def defesaMagica = column[Float]("defesaMagica")
-  def regiaoNome = column[String]("regiaoNome")
-
   def ressuscita = column[Boolean]("ressuscita")
   def chefe = column[Boolean]("chefe")
+
+  //FK
+  def regiaoNome = column[String]("regiaoNome")
 
   def * = (nome,vida,foco,estamina,almas,hollow,forca,destreza,inteligencia,fe,defesaFisica,defesaMagica,ressuscita,chefe,regiaoNome)
   def localizacao = foreignKey("regiao_FK",regiaoNome,regioes)(_.nome)
