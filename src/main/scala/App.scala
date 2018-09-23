@@ -1,5 +1,6 @@
 import scala.slick.driver.PostgresDriver.simple._
 import br.edu.unifei.darksouls3._
+import scala.concurrent._
 
 object App {
 
@@ -34,24 +35,16 @@ object App {
           println(nome, vida, foco, estamina, almas, hollow, forca, destreza, inteligencia, fe, defesaFisica, defesaMagica, nivel, cargaEquipamento, idAparencia, regiaoNome)
         }*/
 
-
-        /*val users = TableQuery[Users]
-        // SELECT * FROM users
-        users.list foreach { row =>
-          println("user with id " + row._1 + " has username " + row._2)
+        //Exemplo SELECT * WHERE regiaoNome = 'LugarNenhum'
+        humanoides.filter(_.regiaoNome === "LugarNenhum").list foreach { row =>
+          println(s"${row._1} | ${row._2} | ${row._3} | ${row._4} | ${row._5} | ${row._6} | ${row._7} | ${row._8} | ${row._9} | ${row._10} | ${row._11} | ${row._12} | ${row._13} | ${row._14} | ${row._15} | ${row._16} | ${row._17}")
         }
 
-        // SELECT * FROM users WHERE username='john'
-        users.filter(_.username === "john").list foreach { row =>
-          println("user whose username is 'john' has id "+row._1 )
-        }*/
-
-
-
-
-
-
-
+        //Exemplo Inner Join
+        val innerJoin = for {
+          (h, m) <- humanoides join monstros on (_.regiaoNome === _.regiaoNome)
+        } yield (h.nome, m.nome)
+        println(innerJoin.list)
 
 
     }
