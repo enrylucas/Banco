@@ -24,6 +24,6 @@ class Monstro(tag: Tag) extends Table[(String,Int,Int,Int,Long,Boolean,Int,Int,I
   def regiaoNome = column[String]("regiaoNome")
 
   def * = (nome,vida,foco,estamina,almas,hollow,forca,destreza,inteligencia,fe,defesaFisica,defesaMagica,ressuscita,chefe,regiaoNome)
-  def localizacao = foreignKey("regiao_FK",regiaoNome,regioes)(_.nome)
+  def localizacoes = foreignKey("regiao_FK",regiaoNome,regioes)(_.nome)
 
 }
