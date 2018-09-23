@@ -17,8 +17,9 @@ object CreateDb {
         val aparencias = TableQuery[Aparencia]
         val classes = TableQuery[Classe]
         val monstros = TableQuery[Monstro]
+        val itens = TableQuery[Item]
 
-        ( classes.ddl ++ regioes.ddl ++ humanoides.ddl ++ aparencias.ddl ++ armas.ddl ++ armaduras.ddl ++ monstros.ddl).create
+        ( classes.ddl ++ regioes.ddl ++ humanoides.ddl ++ aparencias.ddl ++ armas.ddl ++ armaduras.ddl ++ monstros.ddl ++ itens.ddl).create
 
         //Como criar linhas na tabela:
         val regiaoInput = io.Source.fromFile("regioes.csv")
@@ -53,6 +54,21 @@ object CreateDb {
           humanoides += (cols(0), cols(1).toInt ,cols(2).toInt,cols(3).toInt,cols(4).toLong,cols(5).toBoolean,q1._2,q1._3,q1._4,q1._5,cols(6).toInt, cols(7).toInt, cols(8).toInt,cols(9).toInt,cols(10),cols(11).toInt,cols(12))
         }
         humanoideInput.close
+
+        val monstroInput = io.Source.fromFile("monstros.csv")
+        for (line <- monstroInput.getLines) {
+          val cols = line.split(";")
+          monstros += (cols(0),cols(1).toInt,cols(2).toLong,cols(3).toBoolean,cols(4).toInt,cols(5).toInt,cols(6).toInt,cols(7).toInt,cols(8).toBoolean,cols(9).toBoolean, cols(10))
+        }
+        monstroInput.close
+
+        val itemInput = io.Source.fromFile("monstros.csv")
+        for (line <- itemInput.getLines) {
+          val cols = line.split(";")
+          itens += (cols(0),cols(1).toInt,cols(2))
+        }
+        itemInput.close
+
 
         /*armas += ("Espadão", 20, 200, 100, 300, false, Categoria.espada)
         monstros += ("Crystal Lizard", 100, 0, false, 30, 220, 200, 40, false, false, "LugarNenhum")
