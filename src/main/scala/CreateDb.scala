@@ -5,7 +5,7 @@ import scala.collection.mutable.ArrayBuffer
 object CreateDb {
   def main(args: Array[String]): Unit = {
 
-    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=system"
+    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=admin"
 
     Database.forURL(connectionUrl, driver = "org.postgresql.Driver") withSession {
       implicit session =>
@@ -42,13 +42,25 @@ object CreateDb {
         }
         aparenciaInput.close
 
-        armas += ("Espadão", 20, 200, 100, 300, false, Categoria.espada)
+        val humanoideInput = io.Source.fromFile("humanoides.csv")
+
+        for (line <- humanoideInput.getLines) {
+          val cols = line.split(";").map(_.trim)
+          //println (cols(0))
+          val q1 = classes.filter(_.nome === cols(10)).first
+
+
+          humanoides += (cols(0), cols(1).toInt ,cols(2).toInt,cols(3).toInt,cols(4).toLong,cols(5).toBoolean,q1._2,q1._3,q1._4,q1._5,cols(6).toInt, cols(7).toInt, cols(8).toInt,cols(9).toInt,cols(10),cols(11).toInt,cols(12))
+        }
+        humanoideInput.close
+
+        /*armas += ("Espadão", 20, 200, 100, 300, false, Categoria.espada)
         monstros += ("Crystal Lizard", 100, 0, false, 30, 220, 200, 40, false, false, "LugarNenhum")
         armaduras += ("Xanthous Crown", 10, 100, 49, 58, false, Categoria.elmo)
         humanoides ++= Seq(
           ("Jolly", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42, "Assassin",2,"LugarNenhum"),
           ("Jollie", 1100, 60, 90, 311822, true, 18, 16, 50, 20, 100, 190, 90, 42,"Mercenary",4,"LugarNenhum")
-        )
+        )*/
 
         println("Creation completed.")
     }
