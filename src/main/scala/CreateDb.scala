@@ -35,13 +35,19 @@ object CreateDb {
         }
         classeInput.close
 
-        aparencias += (10,"liso", "marrom","grande", "verde", "M", 2, "preto")
+        val aparenciaInput = io.Source.fromFile("aparencias.csv")
+        for (line <- aparenciaInput.getLines) {
+          val cols = line.split(";").map(_.trim)
+          aparencias += (0,cols(0),cols(1),cols(2),cols(3),cols(4),cols(5).toFloat,cols(6))
+        }
+        aparenciaInput.close
+
         armas += ("Espadão", 20, 200, 100, 300, false, Categoria.espada)
-        monstros += ("Crystal Lizard", 100, 0, 0, 1000, false, 0, 0, 0, 0, 200, 40, false, false, "LugarNenhum")
+        monstros += ("Crystal Lizard", 100, 0, false, 30, 220, 200, 40, false, false, "LugarNenhum")
         armaduras += ("Xanthous Crown", 10, 100, 49, 58, false, Categoria.elmo)
         humanoides ++= Seq(
-          ("Jolly", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42, "Assassin",10,"LugarNenhum"),
-          ("Jollie", 1100, 60, 90, 311822, true, 18, 16, 50, 20, 100, 190, 90, 42,"Mercenary",10,"LugarNenhum")
+          ("Jolly", 1500, 60, 90, 345932, true, 40, 40, 12, 10, 150, 150, 90, 42, "Assassin",2,"LugarNenhum"),
+          ("Jollie", 1100, 60, 90, 311822, true, 18, 16, 50, 20, 100, 190, 90, 42,"Mercenary",4,"LugarNenhum")
         )
 
         println("Creation completed.")
