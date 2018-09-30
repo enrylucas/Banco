@@ -1,10 +1,87 @@
-Lassic;170;130;15;2300;false;50;80;30;120;Sorcerer;2;Lothric Castle
-Krayvhus;200;100;17;5700;false;75;55;42;130;Warrior;4;Archdragon Peak
-Paragon;190;110;20;4000;false;73;57;45;123;Thief;3;The Dreg Heap
-Purpleskull;210;90;9;20;true;60;70;28;120;Knight;3;The Ringed City
-Tonoe;182;118;18;0;true;35;95;40;140;Cleric;5;Irithyll Dungeon
-Tenemur;198;102;11;99;true;54;76;35;110;Pyromancer;1;Cathedral of the Deep
-Dorin;201;99;13;3653;false;71;59;33;127;Assassin;2;Farron Keep
-Sirius;178;122;16;1280;false;66;64;39;114;Mercenary;4;Undead Settlement
-Lothar;205;95;16;10000;false;47;83;43;125;Knight;1;Smouldering Lake
-Norton;180;120;10;1720;false;58;72;40;140;Herald;5;Archdragon Peak
+Misty;155;71;2;4104;false;28;55;55;16;Thief;2;Cathedral of the Deep
+Lonios;169;155;8;4206;false;27;3;66;44;Pyromancer;3;Anor Londo
+Karnos;187;154;16;3445;false;18;50;23;32;Thief;3;The Ringed City
+Kethorin;176;73;0;7240;false;23;30;46;25;Assassin;5;Cathedral of the Deep
+Patrick Sebalos;154;165;14;9300;false;27;33;63;36;Assassin;4;Catacombs of Karthus
+Daewron;160;175;7;6020;false;44;12;45;55;Deprived;1;Archdragon Peak
+Euturiel;156;156;13;1894;false;8;16;69;50;Warrior;3;Consumed King’s Garden
+As-Ha;167;140;2;2437;false;33;26;20;44;Knight;3;Catacombs of Karthus
+Sa-Lewis;156;98;15;7122;false;36;35;68;37;Pyromancer;2;Irithyll Dungeon
+Sandocan;166;81;9;6689;false;49;28;30;32;Knight;3;Catacombs of Karthus
+Habbor;187;152;10;1278;false;42;71;48;7;Warrior;3;Kiln of the First Flame
+Haddes;167;146;5;9896;false;23;32;24;10;Sorcerer;1;Consumed King’s Garden
+Shamy Rock;163;179;12;553;false;36;67;11;25;Sorcerer;1;Firelink Shrine
+Kubacik;173;134;6;5319;false;13;49;30;16;Sorcerer;5;Grand Archives
+Crow-Mags;164;138;17;9369;false;36;51;29;30;Mercenary;5;Archdragon Peak
+Namish;186;170;14;1518;false;2;44;45;32;Assassin;2;Grand Archives
+Lothar;153;178;4;4127;false;48;66;21;48;Thief;1;Irithyll of the Boreal Valley
+Lughar;150;70;14;7878;false;41;75;1;19;Sorcerer;2;Painted World of Ariandel
+Blaze Baley;159;89;1;5939;false;19;75;54;43;Herald;4;Catacombs of Karthus
+Norton;189;168;11;4695;false;40;55;22;34;Cleric;5;Irithyll of the Boreal Valley
+Novaselik;151;119;16;2267;false;16;64;38;51;Herald;2;Grand Archives
+Axel;186;160;11;8907;false;19;4;65;33;Assassin;1;Painted World of Ariandel
+Wolfric;189;134;14;2193;false;23;15;45;41;Warrior;2;Irithyll Dungeon
+Ortis;164;100;0;1481;false;49;46;49;17;Sorcerer;2;Irithyll of the Boreal Valley
+Nemat;159;105;1;3076;false;36;57;36;33;Mercenary;3;High Wall of Lothric
+Nambat;169;77;10;7696;false;39;28;12;36;Deprived;2;Lothric Castle
+Null;175;118;19;7979;false;15;26;58;41;Assassin;4;Archdragon Peak
+Stigin;153;179;6;375;false;20;24;61;28;Herald;4;Cemetary of Ash
+Dafar;156;85;14;776;false;13;60;3;59;Sorcerer;4;Consumed King’s Garden
+Menfis;191;174;3;7798;false;48;49;62;16;Assassin;2;Firelink Shrine
+Locky;150;83;17;6839;false;21;71;11;20;Deprived;5;Anor Londo
+Philares;198;166;6;7671;false;40;71;62;8;Mercenary;5;Farron Keep
+Razar;181;175;9;9000;false;25;76;40;15;Thief;1;Catacombs of Karthus
+Natasha;186;82;6;9179;false;1;73;20;37;Knight;1;Consumed King’s Garden
+Cassius;191;150;5;5488;false;22;79;24;14;Deprived;2;Cemetary of Ash
+Bellasco;195;85;17;2947;false;5;14;29;6;Herald;3;Archdragon Peak
+Thorn;168;86;5;4368;false;17;47;2;8;Deprived;2;The Ringed City
+Zio;163;153;4;7001;false;10;30;29;13;Mercenary;5;Catacombs of Karthus
+Pollua;165;76;0;3637;false;8;0;6;24;Warrior;1;Consumed King’s Garden
+Djerta;161;127;0;2719;false;31;43;8;47;Cleric;1;High Wall of Lothric
+Dorin;188;89;2;7397;false;46;3;16;52;Assassin;3;Smouldering Lake
+Krist;182;71;4;8812;false;0;52;31;23;Sorcerer;4;The Ringed City
+Siegfried;176;97;2;3854;false;23;57;61;32;Warrior;4;Farron Keep
+Magnus;169;73;13;2499;false;10;33;35;35;Mercenary;1;Consumed King’s Garden
+Otolon;189;146;6;9479;false;33;16;13;15;Assassin;4;Grand Archives
+Dragnovith;191;95;10;8879;false;34;25;4;39;Herald;4;Anor Londo
+Kerrek;175;87;16;7192;false;27;65;56;9;Sorcerer;2;Catacombs of Karthus
+Lemon;174;144;14;9862;false;2;51;51;26;Thief;5;Firelink Shrine
+Slade;152;123;4;5717;false;9;8;5;8;Warrior;3;Profaned Capital
+Zeon;154;179;3;7667;false;40;73;12;36;Assassin;4;Grand Archives
+Lassic;160;140;17;7729;false;9;55;29;53;Pyromancer;2;The Ringed City
+Jaha;175;141;14;391;false;2;0;52;53;Herald;5;Consumed King’s Garden
+Elsydeon;197;85;5;9598;false;10;43;47;40;Deprived;2;Cathedral of the Deep
+Zhoa;170;81;19;9677;false;38;76;3;35;Assassin;5;The Dreg Heap
+Krayvhus;189;84;5;7822;false;20;67;6;31;Deprived;4;High Wall of Lothric
+Shram;157;147;18;5816;false;9;8;62;52;Knight;3;Cathedral of the Deep
+Kulak;162;126;14;3173;false;32;55;20;34;Cleric;4;Farron Keep
+Khulhan;179;170;12;8267;false;16;62;25;6;Herald;5;Irithyll Dungeon
+Amber;166;105;9;458;false;38;59;67;22;Herald;1;Catacombs of Karthus
+Moe;177;154;10;7080;false;29;8;15;6;Thief;2;Archdragon Peak
+Elder;181;105;13;5934;false;23;11;4;34;Sorcerer;5;Cemetary of Ash
+Paragon;182;128;3;7234;false;45;59;4;47;Herald;1;Smouldering Lake
+Gorus;187;157;19;6152;false;44;50;48;36;Cleric;3;Cathedral of the Deep
+Thunderhead;161;80;9;8765;false;49;7;31;26;Thief;2;Smouldering Lake
+Strongarm;155;120;14;1764;false;38;12;56;41;Warrior;4;Profaned Capital
+Dragontooth;192;75;9;2726;false;6;20;28;30;Cleric;2;Smouldering Lake
+Aspen;154;179;16;2729;false;9;42;34;13;Pyromancer;2;Painted World of Ariandel
+Darkfire;164;116;8;9180;false;1;29;32;52;Cleric;1;Catacombs of Karthus
+Broadwin;159;162;7;8173;false;49;32;12;42;Thief;3;Grand Archives
+Gillius;182;133;13;1302;false;45;34;0;58;Sorcerer;3;Irithyll Dungeon
+Jordan;192;148;12;7417;false;3;58;46;28;Warrior;1;Undead Settlement
+Purpleskull;179;176;2;8678;false;21;60;41;12;Knight;4;The Ringed City
+Luvith;164;163;15;612;false;11;55;45;12;Mercenary;3;Anor Londo
+Tonoe;164;165;17;7891;false;2;21;13;32;Herald;1;Firelink Shrine
+Ironfist;161;80;18;9091;false;26;74;26;39;Assassin;3;Profaned Capital
+Barton;160;85;17;4865;false;38;45;52;30;Herald;4;Untended Graves
+Clayter;181;158;11;4086;false;4;10;28;43;Assassin;2;High Wall of Lothric
+Lynder;175;167;12;7964;false;33;41;22;54;Knight;4;Cemetary of Ash
+Alex;195;171;19;3365;false;23;58;57;23;Herald;1;Painted World of Ariandel
+Ravel;188;123;16;575;false;12;9;4;37;Sorcerer;4;Grand Archives
+Mircéa;196;166;10;2584;false;1;11;64;22;Deprived;1;Irithyll Dungeon
+Tenemur;151;102;1;1945;false;4;6;53;15;Thief;2;Untended Graves
+Huck;195;118;13;9470;false;13;18;64;55;Herald;3;Profaned Capital
+Finn;160;84;17;5102;false;14;2;61;58;Warrior;3;Firelink Shrine
+Zenon;164;120;16;7780;false;17;11;52;19;Assassin;1;Anor Londo
+Sirius;194;86;10;6897;false;13;33;33;11;Sorcerer;4;Archdragon Peak
+Okoma;163;92;4;114;false;16;4;37;6;Herald;2;Anor Londo
