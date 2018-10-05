@@ -17,7 +17,7 @@ object App {
     // database name is "my-db"
     // username is "postgres"
     // and password is "postgres"
-    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=system"
+    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=admin"
     Database.forURL(connectionUrl, driver = "org.postgresql.Driver") withSession {
       implicit session =>
 
@@ -36,7 +36,7 @@ object App {
         }*/
 
         //Exemplo SELECT * WHERE regiaoNome = 'LugarNenhum'
-        humanoides.filter(_.regiaoNome === "LugarNenhum").list foreach { row =>
+        humanoides.filter(_.regiaoNome === "Archdragon Peak").list foreach { row =>
           println(s"${row._1} | ${row._2} | ${row._3} | ${row._4} | ${row._5} | ${row._6} | ${row._7} | ${row._8} | ${row._9} | ${row._10} | ${row._11} | ${row._12} | ${row._13} | ${row._14} | ${row._15} | ${row._16} | ${row._17}")
         }
 
@@ -46,6 +46,9 @@ object App {
         } yield (h.nome, m.nome)
         println(innerJoin.list)
 
+        AparenciaDao.listaAparencia().list.foreach{row => println(row)}
+
+        println(AparenciaDao.buscaAparencia(4).first)
 
     }
   }
