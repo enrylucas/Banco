@@ -1,4 +1,7 @@
-package br.edu.unifei.darksouls3
+package br.edu.unifei.darksouls3.dao
+
+import br.edu.unifei.darksouls3.models.Aparencia
+
 import scala.slick.driver.PostgresDriver.simple._
 
 object AparenciaDao {

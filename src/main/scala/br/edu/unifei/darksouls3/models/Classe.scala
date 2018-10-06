@@ -1,4 +1,5 @@
-package br.edu.unifei.darksouls3
+package br.edu.unifei.darksouls3.models
+
 import scala.slick.driver.PostgresDriver.simple._
 
 class Classe(tag: Tag) extends Table[(String,Int,Int,Int,Int,Int)](tag,"classe") {

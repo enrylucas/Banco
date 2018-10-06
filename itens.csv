@@ -1,5 +1,5 @@
-Estus Flask;7;Fill with Estus at bonfires, and drink to restore HP.
-Alluring Skull;10;Throw to shatter, spreading souls which attract enemies. Not effective for all foes.
-Firebomb;12;Bisque urn filled with black powder. Explodes, inflicting fire damage. 
-Dung Pie;20;Dried fecal waste material, moist on the inside. 
-Young White Branch;5;Become something that blends in to the surroundings. Consumed with use. 
+Estus Flask;7;Fill with Estus at bonfires, and drink to restore HP.;Misty;NULL
+Alluring Skull;10;Throw to shatter, spreading souls which attract enemies. Not effective for all foes.;Misty;NULL
+Firebomb;12;Bisque urn filled with black powder. Explodes, inflicting fire damage.;NULL;Consumed King’s Garden
+Dung Pie;20;Dried fecal waste material, moist on the inside.;Sandocan;NULL
+Young White Branch;5;Become something that blends in to the surroundings. Consumed with use.;Sandocan;NULL

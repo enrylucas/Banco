@@ -1,4 +1,6 @@
-import br.edu.unifei.darksouls3._
+//import br.edu.unifei.darksouls3._
+import br.edu.unifei.darksouls3.models._
+
 import scala.slick.driver.PostgresDriver.simple._
 import scala.collection.mutable.ArrayBuffer
 
@@ -74,7 +76,13 @@ object CreateDb {
         val itemInput = io.Source.fromFile("itens.csv")
         for (line <- itemInput.getLines) {
           val cols = line.split(";")
-          itens += (cols(0),cols(1).toInt,cols(2))
+
+           if(cols(4)== "NULL")
+             itens += (cols(0),cols(1).toInt,cols(2),Some(cols(3)), None)
+           else {
+
+             itens += (cols(0),cols(1).toInt,cols(2),None, Some(cols(4)))
+           }
         }
         itemInput.close
 

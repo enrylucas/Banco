@@ -1,4 +1,6 @@
-package br.edu.unifei.darksouls3
+package br.edu.unifei.darksouls3.dao
+
+import br.edu.unifei.darksouls3.models.Regiao
 
 import scala.slick.driver.PostgresDriver.simple._
 

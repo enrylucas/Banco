@@ -1,4 +1,5 @@
-package br.edu.unifei.darksouls3
+package br.edu.unifei.darksouls3.models
+
 import scala.slick.driver.PostgresDriver.simple._
 
 class PactoHumanoide (tag: Tag) extends Table[(String,String)](tag,"pactoHumanoide"){
