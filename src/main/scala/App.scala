@@ -7,20 +7,13 @@ import scala.concurrent._
 
 object App {
 
-  // this is a class that represents the table I've created in the database
-  /*class Users(tag: Tag) extends Table[(Int, String)](tag, "users") {
-    def id = column[Int]("id")
-    def username = column[String]("username")
-    def * = (id, username)
-  }*/
-
   def main(args: Array[String]): Unit = {
 
     // my database server is located on the localhost
     // database name is "my-db"
     // username is "postgres"
     // and password is "postgres"
-    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=admin"
+    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=system"
     Database.forURL(connectionUrl, driver = "org.postgresql.Driver") withSession {
       implicit session =>
 
