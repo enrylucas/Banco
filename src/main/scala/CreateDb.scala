@@ -4,7 +4,7 @@ import scala.slick.driver.PostgresDriver.simple._
 object CreateDb {
   def main(args: Array[String]): Unit = {
 
-    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=system"
+    val connectionUrl = "jdbc:postgresql://localhost/Teste?user=postgres&password=admin"
 
     Database.forURL(connectionUrl, driver = "org.postgresql.Driver") withSession {
       implicit session =>
@@ -79,14 +79,14 @@ object CreateDb {
         val armaInput = io.Source.fromFile("dataInput/armas.csv")
         for (line <- armaInput.getLines) {
           val cols = line.split(";")
-          armas += (cols(0),cols(1).toInt,cols(2).toInt,cols(3).toInt,cols(4).toInt,cols(5).toBoolean,Categoria.getCategoria(cols(6)))
+          armas += (cols(0),cols(1).toInt,cols(2).toInt,cols(3).toInt,cols(4).toInt,cols(5).toBoolean,Categoria.withName(cols(6)),cols(7))
         }
         armaInput.close
 
         val armaduraInput = io.Source.fromFile("dataInput/armaduras.csv")
         for (line <- armaduraInput.getLines) {
           val cols = line.split(";")
-          armaduras += (cols(0),cols(1).toInt,cols(2).toInt,cols(3).toInt,cols(4).toInt,cols(5).toBoolean,Categoria.getCategoria(cols(6)))
+          armaduras += (cols(0),cols(1).toInt,cols(2).toInt,cols(3).toInt,cols(4).toInt,cols(5).toBoolean,Categoria.withName(cols(6)),cols(7))
         }
         armaInput.close
 

@@ -37,7 +37,7 @@ import scala.slick.driver.PostgresDriver.simple._
     val escudo = Value("Escudo")
     val unknown = Value("Unknown")
 
-    def getCategoria(s: String) = values.find(_.toString == s).getOrElse(Categoria.unknown)
+
 
     implicit val enumMapper = MappedColumnType.base[Categoria, String](_.toString, this.withName)
   }

@@ -7,7 +7,6 @@ class Monstro(tag: Tag) extends Table[(String,Int,Long,Boolean,Int,Int,Int,Int,B
 
   def nome = column[String]("nome",O.PrimaryKey)
   def vida = column[Int]("vida")
-
   def almas = column[Long]("almas")
   def hollow = column[Boolean]("hollow")
   def ataqueFisico = column[Int]("ataqueFisico")
@@ -24,3 +23,4 @@ class Monstro(tag: Tag) extends Table[(String,Int,Long,Boolean,Int,Int,Int,Int,B
   def localizacoes = foreignKey("regiao_FK",regiaoNome,regioes)(_.nome)
 
 }
+
